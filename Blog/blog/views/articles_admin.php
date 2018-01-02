@@ -34,7 +34,7 @@
         
             <footer>
                 <p>Мій перший блог <br>
-                Copiright &copy; 2015
+                Copiright &copy; 2017
                 </p>
             </footer>
         </div>

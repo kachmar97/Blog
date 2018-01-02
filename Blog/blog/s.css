@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: url(images/background.jpg);
+}
+
+.article{
+	margin-top: 30px;
+	background: white; 
+	padding: 5px 15px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+.mblog{
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.mblog a{
+	color: #35D699;
+	text-shadow: #2F4F4F 1px 1px 0, #2F4F4F -1px -1px 0, 
+                 #2F4F4F -1px 1px 0, #2F4F4F 1px -1px 0;
+}	
+
+.mblog a:hover{
+	text-decoration: none;
+	color: #298C66;
+}
+
+.article a{
+	color: #778899;
+	text-shadow: #2F4F4F 1px 1px 0, #2F4F4F -1px -1px 0, 
+                 #2F4F4F -1px 1px 0, #2F4F4F 1px -1px 0;
+}
+
+.admin{
+	display: inline-block;
+	margin-top: 30px;
+   float: right;
+}
+
+footer{
+	 color: #2F4F4F;
+	 margin-top: 30px;
+	 flex: 0 0 auto;
+}
+
+.admin-table{
+    width: 100%;
+}
