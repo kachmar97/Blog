@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Час створення: Січ 12 2018 р., 20:02
+-- Час створення: Січ 27 2018 р., 12:45
 -- Версія сервера: 10.1.29-MariaDB
 -- Версія PHP: 7.1.12
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- База даних: `blog`
 --
+CREATE DATABASE IF NOT EXISTS `u207679091_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `u207679091_db`;
 
 -- --------------------------------------------------------
 
@@ -113,8 +115,3 @@ ALTER TABLE `articles`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
