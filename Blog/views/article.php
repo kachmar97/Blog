@@ -10,6 +10,7 @@
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styl.css">
+        <link rel="stylesheet" href="font/font-awesome.min.css">
         <title>Мій перший блог</title>
     </head>
     <body>
@@ -28,6 +29,7 @@
                 <div class="article">
                     <h3><?=$articles['title']?></h3>
                     <div class="right">
+                        <i class="icon-eye-open"></i>
                         <?=$articles['views']?>
                     </div>
                     <em>Опубліковано: <?=$articles['date']?></em>
