@@ -5,7 +5,7 @@
 <!--         <link rel="stylesheet" href="style.css"> -->
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styl.css">
         <title>Мій перший блог</title>
     </head>
     <body>
@@ -22,10 +22,20 @@
             <div>
                 <?php foreach($articles as $a):?>
                 <div class="article">
-                    <h3><a href="article.php?id=<?=$a['id']?>"><?=$a['title']?></a></h3>
+                        <h3>
+                            <a href="article.php?id=<?=$a['id']?>"><?=$a['title']?></a>
+                        </h3>
+                        <div class="right">
+                            <?=$a['views']?>
+                         </div>
                     <em>Опубліковано: <?=$a['date']?></em>
                     <hr>
-                    <p><?=articles_intro($a['content'])?></p>
+                        <div class="textandphoto">
+                            <p>
+                                <img src="https://placehold.it/120x120" alt="#">
+                                <?=articles_intro($a['content']).'...'?>
+                            </p>
+                        </div>
                 </div>
                 <?php endforeach ?>
             </div>
@@ -36,6 +46,5 @@
                 </p>
             </footer>
         </div>
-        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
 </html>

@@ -94,4 +94,11 @@ function articles_intro($text, $len=500){
     return mb_substr($text, 0, $len);
 }
 
+function views_update($link, $id){
+    $query = "UPDATE articles SET views = views + 1 WHERE id = $id"; 
+    $result = mysqli_query($link, $query);
+    if(!$result)
+        die(mysqli_error($link));
+}
+
 ?>

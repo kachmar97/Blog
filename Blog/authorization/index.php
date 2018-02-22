@@ -15,7 +15,7 @@
 		<button type="submit">
 			Ввійти
 		</button>
-		<a href="/registration/reg.php">Реєстрація</a>
+		<a href="/registration/reg.php" class="reg">Реєстрація</a>
 		<!-- <input class="btn" type="submit" value="Ввійти"> -->
 		</div>
 	</form>

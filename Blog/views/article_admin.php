@@ -1,36 +1,27 @@
-<?php
-error_reporting (0);
-?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/admins.css">
         <title>Мій перший блог</title>
     </head>
     <body>
         <div class="container">
-            <h1><a href="http://localhost/blog/">Мій перший блог</a></h1>
-            
+            <div class="mblog">
+                <h1><a href="/">Мій перший блог</a></h1>
+            </div>
             <div>
                 <form method="post" action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
                 
-                <label>
                     Назва<br>
-                    <input type="text" name="title" value="<?=$article['title']?>" class="form-item" autofocus required>
-                </label><br>
-                <label>
+                    <input class="inp" type="text" name="title" value="<?=$article['title']?>" class="form-item" autofocus required><br>
                     Дата<br>
-                    <input type="date" name="date" value="<?=$article['date']?>" class="form-item" required>
-                </label><br>
-                <label>
+                    <input class="inp" type="date" name="date" value="<?=$article['date']?>" class="form-item" required><br>
                     Стаття<br>
-                    <textarea class="form-item" name="content" required>
-                        <?=$article['content']?>
-                    </textarea>
-                </label><br>
-                    <input type="submit" value="Зберегти" class="btn">
+                    <textarea class="form-item" name="content" rows="10" required><?=trim($article['content'])?></textarea><br>
+                    <button type="submit">Зберегти</button>
+                    
                     
                 </form>
             </div>

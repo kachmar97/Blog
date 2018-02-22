@@ -4,15 +4,29 @@
 }
 
 body{
-	background: url(images/background.jpg);
+	background: url(../images/background.jpg);
+}
+
+h3{
+    display: inline-block;
+}
+
+em{
+    display: block;
 }
 
 .article{
 	margin-top: 30px;
 	background: white; 
-	padding: 5px 15px;
+	padding: 15px;
 	border: 1px solid grey;
 	border-radius: 5px;
+	display: inline-block;
+}
+
+.article img{
+	float: left;
+	padding-right: 15px;
 }
 
 .mblog{
@@ -38,17 +52,31 @@ body{
 }
 
 .admin{
-	display: inline-block;
 	margin-top: 30px;
    float: right;
 }
 
 footer{
-	 color: #2F4F4F;
-	 margin-top: 30px;
-	 text-align: center;
+   margin-bottom: 30px;
+	color: #2F4F4F;
+	margin-top: 30px;
+	text-align: center;
 }
 
 .admin-table{
-    width: 100%;
+	width: 100%;
+}
+
+.textandphoto{
+    display: inline-block;
+    padding: 0px;
+}
+
+p{
+    margin: 0px;
+}
+
+
+.right{
+    float: right;
 }
