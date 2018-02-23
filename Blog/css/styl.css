@@ -1,10 +1,20 @@
-*{
-	margin: 0;
-	padding: 0;
+html, body {
+        height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
 
 body{
 	background: url(../images/background.jpg);
+	display: flex;
+    flex-direction: column;
+}
+
+.container{
+      flex-grow: 1;
 }
 
 h3{
@@ -57,9 +67,9 @@ em{
 }
 
 footer{
-   margin-bottom: 30px;
 	color: #2F4F4F;
 	margin-top: 30px;
+	margin-bottom: 20px;
 	text-align: center;
 }
 
@@ -69,13 +79,12 @@ footer{
 
 .textandphoto{
     display: inline-block;
-    padding: 0px;
+    padding: 0;
 }
 
 p{
-    margin: 0px;
+    margin: 0;
 }
-
 
 .right{
     float: right;
