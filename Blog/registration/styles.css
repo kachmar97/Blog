@@ -9,13 +9,12 @@ body{
 
 form{
 	background: white; 
-	padding: 5px 15px;
 	border: 1px solid grey;
 	border-radius: 5px;
 	width: 350px;
 	margin: 0 auto;
 	margin-top: 200px;
-	padding: 10px 20px 20px;
+	padding: 10px 20px 15px;
 }
 
 form h1{
@@ -28,6 +27,11 @@ form h1{
 
 form h1:hover{
 	cursor: default;
+}
+
+form .auth{
+    text-align: center;
+    margin-top: 5px;
 }
 
 .center{
@@ -55,4 +59,13 @@ button:hover{
 	color: #778899;
 	border: 2px #778899 solid;
 	background: #fff;
+}
+
+.auth{
+    display: block;
+    color: #778899;
+}
+
+.auth:hover{
+    color: #778899;
 }

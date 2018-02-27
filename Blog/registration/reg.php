@@ -1,5 +1,5 @@
 
-<?php	require_once("../database.php");
+<?php	include("../database.php");
 
     $db = db_connect();
 	//$db = mysqli_connect('mysql.hostinger.com.ua', 'u207679091_root', '1234554321', 'u207679091_db') or DIE ('Не вдалося підключитися до бази даних');
@@ -9,12 +9,12 @@
 	$password2 = $_POST['password2'];
 	if(isset($_POST['submit']))
 	{
-	    $query = mysqli_query($db, "SELECT * FROM users WHERE login = '$login'");
+	    $query = mysqli_query($db, "SELECT * FROM users WHERE login = '$login' OR email = '$email'");
 		$result = mysqli_num_rows($query);
 
 		if($result==0){
     	    if($password1==$password2){
-        		$query = "INSERT INTO users (login, password) VALUES ('$login', SHA('$password1'))";
+        		$query = "INSERT INTO users (login, password, email) VALUES ('$login', SHA('$password1'), '$email')";
         		mysqli_query($db, $query);
         		echo "
 					<script language='JavaScript' type='text/JavaScript'>
@@ -29,7 +29,7 @@
     	        echo "Паролы не спывпадають";
     	    }
 		}else{
-		    echo "<div style='background: red; text-align: center; color: white; font-weight: bold;'>Користувач з таким ім’ям вже зареєстрований!!!</div>";
+		    echo "<div style='background: red; text-align: center; color: white; font-weight: bold;'>Користувач з таким логіном або email вже зареєстрований!!!</div>";
 		}
 	}
 	
@@ -39,7 +39,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
@@ -50,6 +50,7 @@
 		<input class="inp" placeholder="Введіть пароль" type="password" name="password1" required><br>
 		<input class="inp" placeholder="Повторіть введений пароль" type="password" name="password2" required><br>
 		<button type="submit" name="submit">Зареєструватися</button>
+		<a href="../authorization" class="auth">Авторизуватися</a>
 	</form>
 </body>
 </html>

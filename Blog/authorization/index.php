@@ -15,9 +15,9 @@
 		<button type="submit">
 			Ввійти
 		</button>
-		<a href="/registration/reg.php" class="reg">Реєстрація</a>
-		<!-- <input class="btn" type="submit" value="Ввійти"> -->
+		<a href="/registration/reg.php" class="link reg">Реєстрація</a>
 		</div>
 	</form>
+		<a href="forgetpassword.php" class="link fgetpass">Забули пароль?</a>
 </body>
 </html>

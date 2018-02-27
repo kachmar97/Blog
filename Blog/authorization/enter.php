@@ -2,7 +2,6 @@
 	require_once("../database.php");
 
     $db = db_connect();
-	//$db = mysqli_connect('mysql.hostinger.com.ua', 'u207679091_root', '1234554321', 'u207679091_db') or DIE ('Не вдалося підключитися до бази даних');
 	session_start();
 	
 	if (!isset($_SESSION['login'])){
