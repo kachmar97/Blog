@@ -26,7 +26,7 @@
                             <td><?=$a['date']?></td>
                             <td><?=$a['title']?></td>
                             <td><a href="index.php?action=edit&id=<?=$a['id']?>">Редагувати</a></td>
-                            <td><a href="index.php?action=delete&id=<?=$a['id']?>">Видалити</a></td>
+                            <td><a href="index.php?action=delete&id=<?=$a['id']?>" onclick="return del()">Видалити</a></td>
                         </tr>
                          <?php endforeach ?>
                     </table>
@@ -40,6 +40,16 @@
                 Copiright &copy; 2017
             </p>
         </footer>
-        
+
+        <script type="text/javascript">
+        	function del(){
+        		if(confirm("Видалити статтю?")){
+        		    return true;
+        		}else{
+        		    return false;
+        		}
+        	}	
+        </script>    
+
     </body>
 </html>
