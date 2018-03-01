@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Europe/Kiev');
+
 function articles_all($link)
 {
     $query = "SELECT * FROM articles ORDER BY id DESC";
@@ -34,9 +36,10 @@ function articles_get($link, $id_article){
 
 function articles_new($link, $title, $date, $content){
     $title = trim($title);
+    $date = trim($date);
     $content = trim($content);
     
-    $t="INSERT INTO articles (title, date, content) VALUES('%s','%s','%s')";
+    $t="INSERT INTO articles (title, date, content) VALUES('%s','%s', '%s')";
     
     $query = sprintf($t, mysqli_real_escape_string($link, $title),
                         mysqli_real_escape_string($link, $date),

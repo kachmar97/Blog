@@ -44,7 +44,7 @@
         
             <footer>
                 <p>Мій перший блог <br>
-                Copiright &copy; 2017
+                <a href="views/date.php">Copiright</a> &copy; 2017
                 </p>
             </footer>
         </div>

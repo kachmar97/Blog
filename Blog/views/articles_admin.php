@@ -1,3 +1,5 @@
+<?php date_default_timezone_set('UTC');?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,7 +27,7 @@
                         <tr>
                             <td><?=$a['date']?></td>
                             <td><?=$a['title']?></td>
-                            <td><a href="index.php?action=edit&id=<?=$a['id']?>">Редагувати</a></td>
+                            <td><a href="index.php?action=edit&id=<?=$a['id']?>" name="edit">Редагувати</a></td>
                             <td><a href="index.php?action=delete&id=<?=$a['id']?>" onclick="return del()">Видалити</a></td>
                         </tr>
                          <?php endforeach ?>

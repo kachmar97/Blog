@@ -16,11 +16,9 @@
                 
                     Назва<br>
                     <input class="inp" type="text" name="title" value="<?=$article['title']?>" class="form-item" autofocus required><br>
-                    Дата<br>
-                    <input class="inp" type="date" name="date" value="<?=$article['date']?>" class="form-item" ><br>
                     Стаття<br>
                     <textarea class="form-item" name="content" rows="10" required><?=trim($article['content'])?></textarea><br>
-                    <button type="submit">Зберегти</button>
+                    <button type="submit" name="save">Зберегти</button>
                     
                     
                 </form>
