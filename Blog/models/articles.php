@@ -2,9 +2,9 @@
 
 date_default_timezone_set('Europe/Kiev');
 
-function articles_all($link)
+function articles_all($link, $sort='id DESC')
 {
-    $query = "SELECT * FROM articles ORDER BY id DESC";
+    $query = "SELECT * FROM articles ORDER BY $sort";
     $result = mysqli_query($link, $query);
     
     if(!$result)
@@ -45,7 +45,6 @@ function articles_new($link, $title, $date, $content){
                         mysqli_real_escape_string($link, $date),
                         mysqli_real_escape_string($link, $content));
     
-    //echo $query;
     $result = mysqli_query($link, $query);
     
     if (!$result)
@@ -112,6 +111,30 @@ function generatePassword($length = 8){
       $string .= substr($chars, rand(1, $numChars) - 1, 1);
     }
     return $string;
+}
+
+function sortingArticles(){
+    $sorting = $_GET['sort'];
+
+    switch ($sorting){
+        
+        case 'views-desk':
+            $sorting = 'views DESC';
+            $sort_name = 'По даті';
+            break;
+        
+        case 'date-desk':
+            $sorting = 'date DESC';
+            $sort_name = 'По даті';
+            break;
+        
+        default:
+            $sorting = 'id DESC';
+            $sort_name = 'Немає сортування';
+            break;
+    }
+    
+return $sorting;
 }
 
 ?>

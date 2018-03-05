@@ -13,14 +13,11 @@
             </div>
             <div>
                 <form method="post" action="index.php?action=<?=$_GET['action']?>&id=<?=$_GET['id']?>">
-                
                     Назва<br>
                     <input class="inp" type="text" name="title" value="<?=$article['title']?>" class="form-item" autofocus required><br>
                     Стаття<br>
                     <textarea class="form-item" name="content" rows="10" required><?=trim($article['content'])?></textarea><br>
                     <button type="submit" name="save">Зберегти</button>
-                    
-                    
                 </form>
             </div>
         </div>

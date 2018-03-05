@@ -3,9 +3,8 @@
     require_once("models/articles.php");
     
     $link = db_connect();
-    $articles = articles_all($link);
-
-
+    $sorting = sortingArticles();
+    $articles = articles_all($link, $sorting);
 
     include("views/articles.php")
 ?>

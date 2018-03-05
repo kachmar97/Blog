@@ -1,0 +1,108 @@
+html, body {
+        height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	background: url(../images/background.jpg);
+	display: flex;
+    flex-direction: column;
+}
+
+.container{
+      flex-grow: 1;
+}
+
+h3{
+    display: inline-block;
+}
+
+em{
+    display: block;
+}
+
+.article{
+	margin-top: 30px;
+	background: white; 
+	padding: 15px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	display: inline-block;
+	width: 100%;
+}
+
+.article img{
+	float: left;
+	padding-right: 15px;
+}
+
+.mblog{
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.title{
+	color: #35D699;
+	text-shadow: #2F4F4F 1px 1px 0, #2F4F4F -1px -1px 0, 
+                 #2F4F4F -1px 1px 0, #2F4F4F 1px -1px 0;
+}	
+
+.title:hover{
+	text-decoration: none;
+	color: #298C66;
+}
+
+.article a{
+	color: #778899;
+	text-shadow: #2F4F4F 1px 1px 0, #2F4F4F -1px -1px 0, 
+                 #2F4F4F -1px 1px 0, #2F4F4F 1px -1px 0;
+}
+
+.admin{
+	margin-top: 30px;
+   float: right;
+}
+
+footer{
+	color: #2F4F4F;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.admin-table{
+	width: 100%;
+}
+
+.textandphoto{
+    display: inline-block;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.right{
+    float: right;
+}
+
+#sorting-list{
+   /* margin: 0;
+    border: 1px solid grey;
+    width: 200px;
+    height: 108px;
+    background-color: white;
+    padding-top: 5px;
+    display: none;*/
+}
+
+#select-sort{
+    color: #748996;
+    text-decoration: underline;
+    cursor: pointer;
+}

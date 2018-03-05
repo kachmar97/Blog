@@ -2,7 +2,6 @@
 
     views_update($link, $_GET['id']);
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +15,7 @@
     <body>
         <div class="container">
             <div class="mblog">
-            <h1><a href="/">Мій перший блог</a></h1>
+            <h1><a href="/" class="title">Мій перший блог</a></h1>
             </div>
             <div class="admin">
             <a href="/authorization/index.php">Вхід</a>
